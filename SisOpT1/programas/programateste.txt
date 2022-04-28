@@ -1,0 +1,8 @@
+.code
+ADD 1
+ADD 2
+ADD 3
+.endcode
+.data
+umaVariavel 10
+.enddata
