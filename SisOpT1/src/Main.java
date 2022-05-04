@@ -1,12 +1,6 @@
-import javafx.scene.shape.Path;
-
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class Main {
 
@@ -30,7 +24,7 @@ public class Main {
 
 
         testaMatriz(comandos);
-
+        
         /*
 
         FUNÇÕES

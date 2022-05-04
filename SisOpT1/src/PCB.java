@@ -8,12 +8,12 @@ public class PCB {
     public int acc;
     public int tamMemoria;
     public int prioridade; // 2 = Baixa prioridade | 1 = Media prioridade | 0 = Alta prioridade
-    public int status; // 0 = finalizado | 1 = pronto para executar | 2 = executando | 3 = bloqueado |      <- isso poderia ser uma lista também.
+    public ProcessState status; // 0 = finalizado | 1 = pronto para executar | 2 = executando | 3 = bloqueado |      <- isso poderia ser uma lista também.
     public int tempoEsperando;
     public int tempoExecucao;
 
 
-    PCB(int umPid,int umTamMemoria, int umaPrioridade,int umStatus){
+    PCB(int umPid,int umTamMemoria, int umaPrioridade, ProcessState umStatus){
 
         this.pid = umPid;
         this.tamMemoria = umTamMemoria;
@@ -58,12 +58,12 @@ public class PCB {
     }
 
 
-    public int getStatus() {
+    public ProcessState getStatus() {
         return status;
     }
 
 
-    public void setStatus(int status) {
+    public void setStatus(ProcessState status) {
         this.status = status;
     }
 
