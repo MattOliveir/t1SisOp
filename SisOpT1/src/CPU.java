@@ -1,48 +1,50 @@
 public class CPU {
     
-    public int PC;
+    public int pc;
     public Processo ir;
-
+    public int acc;
+    public int op1;
+    public int label;
 
     public void run() {
         while (true) {
             switch (ir.code) {
-                case ADD:
+                case "ADD":
                     acc = acc + op1;
                     
                     break;
             
-                case SUB:
+                case "SUB":
                     acc = acc - op1;
 
                     break;
 
-                case MULT:
+                case "MULT":
                     acc = acc * op1;
 
-                case DIV:
+                case "DIV":
                     acc = acc/op1;
 
-                case LOAD:
+                case "LOAD":
                     acc = op1;
 
-                case STORE:
+                case "STORE":
                     op1 = acc;
 
-                case BRANY:
+                case "BRANY":
                     pc = label;
 
-                case BRPOS:
+                case "BRPOS":
                     if(acc>0){
                         pc = op1;
                     }
 
-                case BRZERO:
+                case "BRZERO":
                     if(acc>0){
                         pc = op1;
                     }
 
-                case BRNEG:
+                case "BRNEG":
                     if(acc>0){
                         pc = op1;
                     }
