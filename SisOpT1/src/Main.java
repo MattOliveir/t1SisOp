@@ -1,5 +1,3 @@
-import javafx.scene.shape.Path;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -7,12 +5,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 public class Main {
 
 
     public static void main(String[] args) throws Exception {
 
+        Scanner in = new Scanner(System.in);
+        int prioridade = 2;
+        int quantum;
 
         String nomeArq = "programateste" + ".txt"; // nome do arquivo, ainda precisa ser programado
 
@@ -30,6 +32,26 @@ public class Main {
 
 
         testaMatriz(comandos);
+
+        while(true){
+            System.out.println("Escolha uma politica de Escalonamento:");
+            System.out.println("1 - Prioridade sem preempção");
+            System.out.println("2 - Prioridade com preempção");
+            System.out.println("3 - Round Robin com Quantum");
+            int op = in.nextInt();
+            if(op == 1 || op == 2){
+                System.out.println("Defina a prioridade:");
+                System.out.println("0 - Alta Prioridade ");
+                System.out.println("1 - Média Prioridade");
+                System.out.println("2 - Baixa Prioridade");
+                prioridade = in.nextInt();
+                break;
+            }else if(op == 3){
+                System.out.println("Defina o quantum:");
+                quantum = in.nextInt();
+                break;
+            }
+        }
 
         /*
 

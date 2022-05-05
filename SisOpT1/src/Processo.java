@@ -8,5 +8,4 @@ public class Processo{
 
     public Dictionary<String,Integer> variaveis; // variáveis e seus valores.
 
-
 }
